@@ -27,7 +27,9 @@ const deletePerson = (id) => {
 };
 
 const updatePerson = (id, obj) => {
-  persons[id] = { ...JSON.parse(obj) };
+  const person = { ...JSON.parse(obj) };
+  person.id = id;
+  persons[id] = person;
 
   return JSON.stringify(persons[id]);
 };
