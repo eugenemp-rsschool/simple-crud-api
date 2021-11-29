@@ -12,7 +12,7 @@ const validatePerson = (person) => {
 
   if (
     obj.hobbies.length > 0 &&
-    obj.hobbies.every((el) => typeof el === 'string')
+    !obj.hobbies.every((el) => typeof el === 'string')
   )
     return false;
 
