@@ -8,7 +8,7 @@ const setPerson = (obj) => {
   person.id = uuidv4();
   persons[person.id] = person;
 
-  return JSON.stringify(persons[obj.id]);
+  return JSON.stringify(persons[person.id]);
 };
 
 const getPerson = (id) => {
@@ -27,7 +27,7 @@ const deletePerson = (id) => {
 };
 
 const updatePerson = (id, obj) => {
-  persons[id] = JSON.parse(obj);
+  persons[id] = { ...JSON.parse(obj) };
 
   return JSON.stringify(persons[id]);
 };
