@@ -7,16 +7,7 @@ const config = {
   },
   plugins: [],
   module: {
-    rules: [
-      {
-        exclude: /node_modules/,
-        test: /\.(js|jsx)$/i,
-        loader: 'babel',
-        query: {
-          presets: ['es2015'],
-        },
-      },
-    ],
+    rules: [],
   },
   target: 'node',
   mode: 'production',
