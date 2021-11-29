@@ -7,7 +7,7 @@ const handlePath = (path) => {
   return {
     path: pathArr[1] !== undefined ? pathArr[1] : null,
     pathValid:
-      regexPath.test(pathArr[1]) && pathArr.length > 2 && pathArr.length <= 4 && !pathArr[3],
+      regexPath.test(pathArr[1]) && pathArr.length >= 2 && pathArr.length <= 4 && !pathArr[3],
     id: pathArr[2] !== undefined ? pathArr[2] : null,
     idValid: regexUUID.test(pathArr[2]),
   };
