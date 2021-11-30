@@ -1,5 +1,11 @@
 const validatePerson = (person) => {
-  const obj = JSON.parse(person);
+  let obj;
+
+  try {
+    obj = JSON.parse(person);
+  } catch (error) {
+    return false;
+  }
 
   if (!('name' in obj) || !('age' in obj) || !('hobbies' in obj)) return false;
 
